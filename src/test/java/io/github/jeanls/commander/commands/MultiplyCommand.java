@@ -10,4 +10,9 @@ public class MultiplyCommand implements Commander {
         Integer result = context.get("sum", Integer.class);
         context.put("result", result * 10);
     }
+
+    @Override
+    public boolean canProcess(Context context) {
+        return true;
+    }
 }

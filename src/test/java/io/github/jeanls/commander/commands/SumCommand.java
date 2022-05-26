@@ -11,4 +11,9 @@ public class SumCommand implements Commander {
         final Integer numberB = context.get("numberB", Integer.class);
         context.put("sum", numberA + numberB);
     }
+
+    @Override
+    public boolean canProcess(Context context) {
+        return true;
+    }
 }
