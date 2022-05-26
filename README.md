@@ -2,7 +2,10 @@
 
 Command pattern applied for building code in blocks.
 
-<img src="assets/military.png" style="width: 250px;display: block;margin-left: auto;margin-right: auto" alt="commander">
+<p align="center">
+  <img src="assets/military.png" style="width: 250px;display: block;margin-left: auto;margin-right: auto" alt="commander">
+</p>
+
 
 ## 1. Getting started.
 
