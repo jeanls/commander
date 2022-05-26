@@ -8,7 +8,7 @@ public abstract class Executor {
     private List<Commander> commanders = new ArrayList<>();
     private Context context;
 
-    public abstract void orders(final Context context);
+    public abstract void exec(final Context context);
 
     public Executor add(final Commander commander) {
         commanders.add(commander);
@@ -20,7 +20,7 @@ public abstract class Executor {
         return this;
     }
 
-    public Context run() {
+    public void run() {
         try {
             for (final Commander commander : commanders) {
                 if (commander.canProcess(context)) {
@@ -28,7 +28,6 @@ public abstract class Executor {
                 }
             }
             commanders = new ArrayList<>();
-            return context;
         } catch (final Exception e) {
             commanders = new ArrayList<>();
             throw e;
