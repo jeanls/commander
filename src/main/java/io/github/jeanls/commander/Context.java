@@ -15,6 +15,18 @@ public class Context {
         this.data = new HashMap<>();
     }
 
+    public <T> void putf(final String key, final T o) {
+        if (key == null) {
+            throw new KeyNotNullException("The key cannot be null.");
+        }
+        data.put(key, o);
+    }
+
+    public <T> void putf(final T o) {
+        final String key = o.getClass().getSimpleName();
+        this.putf(key, o);
+    }
+
     public <T> void put(final String key, final T o) {
         if (key == null) {
             throw new KeyNotNullException("The key cannot be null.");
@@ -28,6 +40,14 @@ public class Context {
     public <T> void put(final T o) {
         final String key = o.getClass().getSimpleName();
         this.put(key, o);
+    }
+
+    public void clear(final String key) {
+        data.remove(key);
+    }
+
+    public <T> void clear(final Class<T> clazz) {
+        data.remove(clazz.getSimpleName());
     }
 
     public <T> T get(final String key, final Class<T> clazz) {
