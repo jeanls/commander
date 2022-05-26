@@ -128,6 +128,11 @@ public class SumCommandTyped implements CommanderTyped<Integer> {
     public Integer doProcess(Integer input) {
         return input + 10;
     }
+
+    @Override
+    public boolean canProcess(Integer input) {
+        return true;
+    }
 }
 ````
 
@@ -139,6 +144,11 @@ public class MultiplyCommandTyped implements CommanderTyped<Integer> {
     @Override
     public Integer doProcess(Integer input) {
         return input * 100;
+    }
+
+    @Override
+    public boolean canProcess(Integer input) {
+        return true;
     }
 }
 ````

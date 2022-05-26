@@ -8,4 +8,9 @@ public class SumCommandTyped implements CommanderTyped<Integer> {
     public Integer doProcess(Integer input) {
         return input + 10;
     }
+
+    @Override
+    public boolean canProcess(Integer input) {
+        return true;
+    }
 }
