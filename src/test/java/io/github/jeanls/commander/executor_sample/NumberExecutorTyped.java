@@ -1,8 +1,8 @@
 package io.github.jeanls.commander.executor_sample;
 
-import io.github.jeanls.commander.ExecutorTyped;
 import io.github.jeanls.commander.commands.MultiplyCommandTyped;
 import io.github.jeanls.commander.commands.SumCommandTyped;
+import io.github.jeanls.commander.typed.ExecutorTyped;
 
 public class NumberExecutorTyped extends ExecutorTyped<Integer> {
 

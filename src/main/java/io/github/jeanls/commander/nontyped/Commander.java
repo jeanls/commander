@@ -1,4 +1,4 @@
-package io.github.jeanls.commander;
+package io.github.jeanls.commander.nontyped;
 
 public interface Commander {
 
@@ -6,5 +6,9 @@ public interface Commander {
 
     default boolean canProcess(final Context context) {
         return true;
+    }
+
+    default void rollback() {
+
     }
 }

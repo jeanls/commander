@@ -1,9 +1,9 @@
-package io.github.jeanls.commander;
+package io.github.jeanls.commander.typed;
 
 import io.github.jeanls.commander.executor_sample.NumberExecutorTyped;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ExecutorTypedTest {
 

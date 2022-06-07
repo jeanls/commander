@@ -1,7 +1,7 @@
 package io.github.jeanls.commander.commands;
 
-import io.github.jeanls.commander.Commander;
-import io.github.jeanls.commander.Context;
+import io.github.jeanls.commander.nontyped.Commander;
+import io.github.jeanls.commander.nontyped.Context;
 
 public class MultiplyCommand implements Commander {
 

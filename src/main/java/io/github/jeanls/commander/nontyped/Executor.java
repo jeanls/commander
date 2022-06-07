@@ -1,4 +1,4 @@
-package io.github.jeanls.commander;
+package io.github.jeanls.commander.nontyped;
 
 import java.util.ArrayList;
 import java.util.List;

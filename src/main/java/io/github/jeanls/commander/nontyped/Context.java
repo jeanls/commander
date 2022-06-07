@@ -1,4 +1,4 @@
-package io.github.jeanls.commander;
+package io.github.jeanls.commander.nontyped;
 
 import io.github.jeanls.commander.exceptions.KeyAlreadyExistsException;
 import io.github.jeanls.commander.exceptions.KeyNotNullException;
@@ -23,7 +23,7 @@ public class Context {
     }
 
     public <T> void putf(final T o) {
-        final String key = o.getClass().getSimpleName();
+        final String key = o.getClass().getName();
         this.putf(key, o);
     }
 
@@ -38,7 +38,7 @@ public class Context {
     }
 
     public <T> void put(final T o) {
-        final String key = o.getClass().getSimpleName();
+        final String key = o.getClass().getName();
         this.put(key, o);
     }
 
@@ -47,7 +47,7 @@ public class Context {
     }
 
     public <T> void clear(final Class<T> clazz) {
-        data.remove(clazz.getSimpleName());
+        data.remove(clazz.getName());
     }
 
     public <T> T get(final String key, final Class<T> clazz) {
@@ -58,7 +58,7 @@ public class Context {
     }
 
     public <T> T get(final Class<T> clazz) {
-        final String key = clazz.getSimpleName();
+        final String key = clazz.getName();
         if (!data.containsKey(key)) {
             return null;
         }

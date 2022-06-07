@@ -1,4 +1,4 @@
-package io.github.jeanls.commander;
+package io.github.jeanls.commander.nontyped;
 
 import io.github.jeanls.commander.exceptions.KeyAlreadyExistsException;
 import io.github.jeanls.commander.exceptions.KeyNotNullException;

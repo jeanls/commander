@@ -1,4 +1,4 @@
-package io.github.jeanls.commander;
+package io.github.jeanls.commander.typed;
 
 public interface CommanderTyped<I> {
 
@@ -6,5 +6,9 @@ public interface CommanderTyped<I> {
 
     default boolean canProcess(final I input) {
         return true;
+    }
+
+    default I rollback(final I input) {
+        return input;
     }
 }

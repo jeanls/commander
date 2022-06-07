@@ -1,9 +1,9 @@
 package io.github.jeanls.commander.executor_sample;
 
-import io.github.jeanls.commander.Context;
-import io.github.jeanls.commander.Executor;
 import io.github.jeanls.commander.commands.MultiplyCommand;
 import io.github.jeanls.commander.commands.SumCommand;
+import io.github.jeanls.commander.nontyped.Context;
+import io.github.jeanls.commander.nontyped.Executor;
 
 public class NumberExecutor extends Executor {
 

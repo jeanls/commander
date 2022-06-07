@@ -1,4 +1,4 @@
-package io.github.jeanls.commander;
+package io.github.jeanls.commander.nontyped;
 
 import io.github.jeanls.commander.executor_sample.NumberExecutor;
 import org.junit.jupiter.api.Test;
