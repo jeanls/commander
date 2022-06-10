@@ -5,13 +5,13 @@ import io.github.jeanls.commander.enums.ExecutorStatus;
 import java.util.Collections;
 import java.util.List;
 
-public class ExecutionResponseTyped<T> {
+public class CommanderStepperResponseTyped<T> {
 
-    private final List<ExecutorConstructorTyped<T>> list;
+    private final List<CommanderStepperConstructorTyped<T>> list;
     private final boolean successful;
     private T payload;
 
-    public ExecutionResponseTyped(List<ExecutorConstructorTyped<T>> list, boolean successful, T payload) {
+    public CommanderStepperResponseTyped(List<CommanderStepperConstructorTyped<T>> list, boolean successful, T payload) {
         this.list = list;
         this.successful = successful;
         this.payload = payload;
@@ -19,9 +19,9 @@ public class ExecutionResponseTyped<T> {
 
     public void rollback() {
         Collections.reverse(list);
-        for (final ExecutorConstructorTyped<T> executor : list) {
+        for (final CommanderStepperConstructorTyped<T> executor : list) {
             try {
-                if (executor.getExecutorStatus() != ExecutorStatus.PENDING) {
+                if (executor.getExecutorStatus() != ExecutorStatus.PENDING && executor.getExecutorStatus() != ExecutorStatus.SKIPED) {
                     payload = executor.getOn().rollback(payload);
                 }
             } catch (Exception e) {

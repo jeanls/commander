@@ -3,21 +3,22 @@ package io.github.jeanls.commander.commands;
 import io.github.jeanls.commander.RetryOptions;
 import io.github.jeanls.commander.typed.CommanderTyped;
 
-public class SumCommandTyped implements CommanderTyped<Integer> {
+public class TestFailAttemptsCommand implements CommanderTyped<Integer> {
+
+    private int counter = 1;
 
     @Override
     public Integer doProcess(Integer input) {
-        return input + 10;
+        if (counter < 3) {
+            counter++;
+            throw new RuntimeException("Error");
+        }
+        return input;
     }
 
     @Override
     public boolean canProcess(Integer input) {
         return true;
-    }
-
-    @Override
-    public Integer rollback(Integer input) {
-        return input - 10;
     }
 
     @Override

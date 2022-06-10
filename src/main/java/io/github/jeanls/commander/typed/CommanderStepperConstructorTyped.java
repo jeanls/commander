@@ -1,29 +1,33 @@
 package io.github.jeanls.commander.typed;
 
 import io.github.jeanls.commander.enums.ExecutorStatus;
+import io.github.jeanls.commander.exceptions.ParameterNotNullException;
 
-public class ExecutorConstructorTyped<T> {
+public class CommanderStepperConstructorTyped<T> {
 
     private CommanderTyped<T> on;
     private CommanderTypedSuccess<T> onSuccess;
     private CommanderTypedError<T> onError;
     private ExecutorStatus executorStatus;
 
-    public ExecutorConstructorTyped() {
+    public CommanderStepperConstructorTyped() {
         this.executorStatus = ExecutorStatus.PENDING;
     }
 
-    public ExecutorConstructorTyped<T> on(final CommanderTyped<T> commander) {
+    public CommanderStepperConstructorTyped<T> on(final CommanderTyped<T> commander) {
+        if (commander == null) {
+            throw new ParameterNotNullException("the method add cannot accept null params.");
+        }
         this.on = commander;
         return this;
     }
 
-    public ExecutorConstructorTyped<T> onSuccess(final CommanderTypedSuccess<T> commander) {
+    public CommanderStepperConstructorTyped<T> onSuccess(final CommanderTypedSuccess<T> commander) {
         this.onSuccess = commander;
         return this;
     }
 
-    public ExecutorConstructorTyped<T> onError(final CommanderTypedError<T> commander) {
+    public CommanderStepperConstructorTyped<T> onError(final CommanderTypedError<T> commander) {
         this.onError = commander;
         return this;
     }
