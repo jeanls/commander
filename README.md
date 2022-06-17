@@ -16,14 +16,14 @@ Command pattern applied for building code in blocks.
 <dependency>
     <groupId>io.github.jeanls</groupId>
     <artifactId>commander</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ````
 
 ``build.gradle``
 
 ````groovy
-implementation 'io.github.jeanls:commander:1.0.0'
+implementation 'io.github.jeanls:commander:1.0.1'
 ````
 
 ## 2. Using non typed commander.
