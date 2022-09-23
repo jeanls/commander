@@ -7,7 +7,6 @@ import io.github.jeanls.commander.nontyped.Executor;
 
 public class NumberExecutor extends Executor {
 
-    @Override
     public void exec(final Context context) {
         SumCommand sumCommand = new SumCommand();
         MultiplyCommand multiplyCommand = new MultiplyCommand();

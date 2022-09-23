@@ -8,8 +8,6 @@ public abstract class Executor {
     private List<Commander> commanders = new ArrayList<>();
     private Context context;
 
-    public abstract void exec(final Context context);
-
     public Executor add(final Commander commander) {
         commanders.add(commander);
         return this;

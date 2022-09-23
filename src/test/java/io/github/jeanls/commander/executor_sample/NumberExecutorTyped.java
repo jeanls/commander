@@ -6,7 +6,6 @@ import io.github.jeanls.commander.typed.ExecutorTyped;
 
 public class NumberExecutorTyped extends ExecutorTyped<Integer> {
 
-    @Override
     public Integer exec(Integer initalValue) {
         SumCommandTyped sumCommandTyped = new SumCommandTyped();
         MultiplyCommandTyped multiplyCommandTyped = new MultiplyCommandTyped();
